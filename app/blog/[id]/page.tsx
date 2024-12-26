@@ -31,6 +31,22 @@ const post = {
   ]
 };
 
+
+
+export async function generateStaticParams() {
+  // Replace with actual data fetching
+  const posts = [
+    { id: 1 },
+    { id: 2 },
+    { id: 3 },
+  ];
+
+  return posts.map((post) => ({ id: post.id.toString() }));
+}
+
+
+
+
 export default function BlogPostPage() {
   return (
     <div className="bg-background min-h-screen py-16">
