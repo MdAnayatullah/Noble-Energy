@@ -30,9 +30,9 @@ const Navbar = () => {
     // { name: "Products", href: "/products" },
     // { name: "Projects", href: "/projects" },
     { name: "Blog", href: "/blog" },
-    // { name: "Careers", href: "/careers" },
-    // { name: "Media", href: "/media" },
-    { name: "Contact", href: "/contact" },
+    { name: "Careers", href: "/careers" },
+    { name: "Media", href: "/media" },
+    { name: "Contact Us", href: "/contact" },
   ];
 
   return (

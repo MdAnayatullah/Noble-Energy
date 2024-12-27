@@ -9,7 +9,7 @@ const jobOpenings = [
     id: 1,
     title: "Solar Installation Technician",
     department: "Operations",
-    location: "New York, NY",
+    location: "Bhopal, MP",
     type: "Full-time",
     experience: "2-5 years",
     description: "We're looking for experienced solar installation technicians to join our growing team."
@@ -27,7 +27,7 @@ const jobOpenings = [
     id: 3,
     title: "Project Manager",
     department: "Operations",
-    location: "Los Angeles, CA",
+    location: "Bhopal, MP",
     type: "Full-time",
     experience: "5+ years",
     description: "Oversee solar installation projects from inception to completion."

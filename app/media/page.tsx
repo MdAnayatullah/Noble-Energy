@@ -7,7 +7,7 @@ const mediaItems = [
   {
     id: 1,
     type: "Press Release",
-    title: "SolarTech Announces Expansion into New Markets",
+    title: "Noble Energy Announces Expansion into New Markets",
     date: "2024-03-15",
     summary: "Leading solar energy provider expands operations to serve more communities.",
     downloadUrl: "#"
@@ -17,7 +17,7 @@ const mediaItems = [
     type: "News Coverage",
     title: "Solar Innovation Award 2024",
     date: "2024-03-10",
-    summary: "SolarTech recognized for breakthrough solar panel technology.",
+    summary: "Noble Energy recognized for breakthrough solar panel technology.",
     downloadUrl: "#"
   },
   {
