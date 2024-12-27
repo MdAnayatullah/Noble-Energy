@@ -32,7 +32,7 @@ export default function ContactPage() {
                   <Phone className="h-6 w-6 text-primary" />
                   <div>
                     <h3 className="font-medium">Phone</h3>
-                    <p className="text-muted-foreground">(555) 123-4567</p>
+                    <p className="text-muted-foreground">(+91) 123-4567890</p>
                   </div>
                 </div>
               </CardContent>
@@ -44,7 +44,7 @@ export default function ContactPage() {
                   <Mail className="h-6 w-6 text-primary" />
                   <div>
                     <h3 className="font-medium">Email</h3>
-                    <p className="text-muted-foreground">info@solartech.com</p>
+                    <p className="text-muted-foreground">info@nobleenergy.com</p>
                   </div>
                 </div>
               </CardContent>
@@ -57,8 +57,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-medium">Address</h3>
                     <p className="text-muted-foreground">
-                      123 Solar Street<br />
-                      New York, NY 10001
+                      Bhopal<br />
+                      Madhya Pradesh, 10001, India .
                     </p>
                   </div>
                 </div>
