@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import logo from "@/components/logo/logo1.png";
 
 const Footer = () => {
   return (
@@ -8,50 +10,43 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">About Us</h3>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground mb-4">
               Leading provider of solar energy solutions, committed to a sustainable future through renewable energy.
             </p>
+            <div className="flex justify-center md:justify-start">
+              <Image src={logo} alt="Noble Energy Logo" width={300} height={250} />
+            </div>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {/* <li>
-                <Link href="/products" className="text-muted-foreground hover:text-primary">
-                  Products
-                </Link>
-              </li>
               <li>
-                <Link href="/projects" className="text-muted-foreground hover:text-primary">
-                  Projects
-                </Link>
-              </li> */}
-              <li>
-                <Link href="/" className="text-muted-foreground hover:text-primary">
+                <Link href="/" className="text-muted-foreground hover:text-green-600">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-muted-foreground hover:text-primary">
+                <Link href="/about" className="text-muted-foreground hover:text-green-600">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-muted-foreground hover:text-primary">
+                <Link href="/blog" className="text-muted-foreground hover:text-green-600">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="/careers" className="text-muted-foreground hover:text-primary">
+                <Link href="/careers" className="text-muted-foreground hover:text-green-600">
                   Career
                 </Link>
               </li>
               <li>
-                <Link href="/media" className="text-muted-foreground hover:text-primary">
+                <Link href="/media" className="text-muted-foreground hover:text-green-600">
                   Media
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-muted-foreground hover:text-primary">
+                <Link href="/contact" className="text-muted-foreground hover:text-green-600">
                   Contact Us
                 </Link>
               </li>
@@ -60,7 +55,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li>Bhopal </li>
+              <li>Bhopal</li>
               <li>Madhya Pradesh</li>
               <li>Phone: (+91) 1234567890</li>
               <li>Email: info@nobleenergy.com</li>
