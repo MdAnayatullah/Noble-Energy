@@ -14,7 +14,7 @@ const leaders = [
         education: "Bachelor of Electronic Engineering, Aligarh Muslim University",
         image: hasanImage, // Local image imported
         linkedin: "https://www.linkedin.com/in/shaheedul-hasan-14ab1132/",
-        since: "2010",
+        since: "2024",
         description:
             "With over 20 years in renewable energy, Shaheedul Hasan founded Noble Energy with a vision to revolutionize the solar industry. His leadership has driven our growth from a small startup to an industry leader.",
         quote: "Innovation and sustainability are not just buzzwords - they're the foundation of our future.",
@@ -25,7 +25,7 @@ const leaders = [
         education: "Ph.D. in Solar Engineering, MIT",
         image: arqamImage, // Local image imported
         linkedin: "https://www.linkedin.com/in/arqam-kaolin/",
-        since: "2010",
+        since: "2024",
         description:
             "Arqam's groundbreaking research in solar efficiency has been instrumental in developing our cutting-edge technology solutions.",
         quote: "Technology is the bridge between possibility and reality in renewable energy.",
@@ -37,7 +37,7 @@ const leaders = [
         image:
             "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=400&h=400&q=80",
         linkedin: "https://linkedin.com",
-        since: "2012",
+        since: "2024",
         description:
             "Michael's strategic vision has helped expand our operations across multiple continents while maintaining our commitment to excellence.",
         quote: "Success in sustainable energy comes from balancing innovation with reliability.",
@@ -49,7 +49,7 @@ const leaders = [
         education: "MBA, Wharton School",
         image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=400&h=400&q=80",
         linkedin: "https://linkedin.com",
-        since: "2011",
+        since: "2024",
         description: "Emily's expertise in corporate governance and sustainable business practices has been crucial in shaping our long-term strategy.",
         quote: "Sustainable business is good business - for our planet and our future."
     },
@@ -59,7 +59,7 @@ const leaders = [
         education: "MSc in Engineering, Berkeley",
         image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=400&h=400&q=80",
         linkedin: "https://linkedin.com",
-        since: "2013",
+        since: "2024",
         description: "David's operational excellence has streamlined our installation processes and improved customer satisfaction across all regions.",
         quote: "Efficiency in operations translates directly to customer satisfaction."
     },
@@ -69,7 +69,7 @@ const leaders = [
         education: "Ph.D. in Physics, CalTech",
         image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=400&h=400&q=80",
         linkedin: "https://linkedin.com",
-        since: "2014",
+        since: "2024",
         description: "Lisa leads our R&D initiatives, focusing on next-generation solar technologies and smart energy solutions.",
         quote: "The future of energy is not just clean - it's intelligent and adaptive."
     }
