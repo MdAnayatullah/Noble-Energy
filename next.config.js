@@ -1,23 +1,10 @@
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   output: 'export',
-//   eslint: {
-//     ignoreDuringBuilds: true,
-//   },
-//   images: { unoptimized: true },
-// };
-
-// module.exports = nextConfig;
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", // Ensures a fully static export
+  output: "export", // Ensures static export
   eslint: {
-    ignoreDuringBuilds: true, // Ignores ESLint warnings during the build
+    ignoreDuringBuilds: true, // Ignore lint warnings during builds
   },
-  images: {
-    unoptimized: true, // Disables Next.js image optimization
-  },
+  images: { unoptimized: true }, // Disable image optimization for export
 };
 
 module.exports = nextConfig;

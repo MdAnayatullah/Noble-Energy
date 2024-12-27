@@ -4,11 +4,12 @@ import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
+import FloatingButtons from '@/components/floating-buttons';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Noble  Energy - Leading Solar Energy Provider',
+  title: 'SolarTech Solutions - Leading Solar Energy Provider',
   description: 'Professional solar panel installation and renewable energy solutions for homes and businesses.',
 };
 
@@ -23,8 +24,9 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light">
           <div className="flex min-h-screen flex-col">
             <Navbar />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1 pt-16">{children}</main>
             <Footer />
+            <FloatingButtons />
           </div>
         </ThemeProvider>
       </body>

@@ -14,6 +14,7 @@ const Navbar = () => {
 
   const navigation = [
     { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
   ];
@@ -35,7 +36,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium hover:text-green-700 hover:bg-gray-200"
+                className="text-foreground px-3 py-2 rounded-md text-sm font-medium hover:text-green-700 hover:bg-gray-200"
               >
                 {item.name}
               </Link>
