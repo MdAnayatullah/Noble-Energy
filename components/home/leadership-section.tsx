@@ -1,7 +1,9 @@
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Linkedin } from "lucide-react";
+// import { Linkedin } from "lucide-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import Link from "next/link";
 import Image from "next/image";
 import arqamImage from "@/components/images/arqam.jpeg";
@@ -125,9 +127,9 @@ export default function LeadershipSection() {
                                         href={leader.linkedin}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="absolute bottom-4 right-4 p-2 text-muted-foreground hover:text-primary transition-colors hover:rounded hover:bg-gray-100"
+                                        className="absolute bottom-3 right-4 p-2 text-muted-foreground hover:text-primary transition-colors hover:rounded-full hover:bg-gray-100 hover:translate-y-1"
                                     >
-                                        <Linkedin className="h-5 w-5" />
+                                        <FontAwesomeIcon icon={faLinkedinIn} style={{ color: '#0077B5', fontSize: '24px' }} className="h-5 w-5" />
                                     </Link>
                                 </div>
                             </CardContent>

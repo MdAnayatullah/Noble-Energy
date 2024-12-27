@@ -1,7 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ArrowUp, MessageCircle } from "lucide-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ArrowUp } from "lucide-react";
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -45,9 +47,9 @@ export default function FloatingButtons() {
             >
                 <Button
                     size="icon"
-                    className="h-12 w-12 rounded-full bg-[#25D366] hover:bg-[#20BD5A] shadow-lg transition-all duration-300 hover:shadow-xl"
+                    className="h-12 w-12 rounded-full bg-[#e6ece8] hover:bg-[#afbab2] shadow-lg transition-all duration-300 hover:shadow-xl"
                 >
-                    <MessageCircle className="h-6 w-6 text-white" />
+                    <FontAwesomeIcon icon={faWhatsapp} style={{ color: '#25D366', fontSize: '24px' }} className="h-6 w-6 text-white" />
                 </Button>
             </a>
         </>

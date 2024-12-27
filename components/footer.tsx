@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+// import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import logo from "@/components/logo/logo1.png";
 
 const Footer = () => {
@@ -65,16 +67,16 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
               <Link href="#" className="text-muted-foreground hover:text-primary">
-                <Facebook className="h-6 w-6" />
+                <FontAwesomeIcon icon={faFacebook} style={{ color: '#4267B2', fontSize: '24px' }} className="h-6 w-6" />
               </Link>
               <Link href="#" className="text-muted-foreground hover:text-primary">
-                <Twitter className="h-6 w-6" />
+                <FontAwesomeIcon icon={faTwitter} style={{ color: '#1DA1F2', fontSize: '24px' }} className="h-6 w-6" />
               </Link>
               <Link href="#" className="text-muted-foreground hover:text-primary">
-                <Instagram className="h-6 w-6" />
+                <FontAwesomeIcon icon={faInstagram} style={{ color: '#E1306C', fontSize: '24px' }} className="h-6 w-6" />
               </Link>
               <Link href="#" className="text-muted-foreground hover:text-primary">
-                <Linkedin className="h-6 w-6" />
+                <FontAwesomeIcon icon={faLinkedinIn} style={{ color: '#0077B5', fontSize: '24px' }} className="h-6 w-6" />
               </Link>
             </div>
           </div>
