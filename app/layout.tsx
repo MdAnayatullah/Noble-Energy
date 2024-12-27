@@ -9,7 +9,7 @@ import FloatingButtons from '@/components/floating-buttons';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'SolarTech Solutions - Leading Solar Energy Provider',
+  title: 'Noble Energy - Leading Solar Energy Provider',
   description: 'Professional solar panel installation and renewable energy solutions for homes and businesses.',
 };
 
