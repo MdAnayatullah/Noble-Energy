@@ -125,7 +125,7 @@ export default function LeadershipSection() {
                                         href={leader.linkedin}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="absolute bottom-4 right-4 p-2 text-muted-foreground hover:text-primary transition-colors"
+                                        className="absolute bottom-4 right-4 p-2 text-muted-foreground hover:text-primary transition-colors hover:rounded hover:bg-gray-100"
                                     >
                                         <Linkedin className="h-5 w-5" />
                                     </Link>
