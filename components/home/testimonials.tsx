@@ -1,5 +1,9 @@
+"use client"
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Star } from "lucide-react";
+import { useScrollAnimation } from "@/lib/hooks/use-scroll-animation";
+import clsx from "clsx";
+const cn = clsx;
 
 const testimonials = [
   {
@@ -26,39 +30,54 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  const headerAnimation = useScrollAnimation({ type: "fade", delay: 2000 });
   return (
     <section className="py-16 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold">What Our Clients Say</h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Don't just take our word for it
-          </p>
+        <div ref={headerAnimation.ref} className={headerAnimation.className}>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold">What Our Clients Say</h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Don't just take our word for it
+            </p>
+          </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial) => (
-            <Card key={testimonial.name} className="text-card-foreground">
-              <CardHeader className="flex flex-row items-center gap-4">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="h-12 w-12 rounded-full object-cover"
-                />
-                <div>
-                  <h3 className="font-semibold">{testimonial.name}</h3>
-                  <p className="text-sm text-muted-foreground">{testimonial.title}</p>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <div className="flex mb-2">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                  ))}
-                </div>
-                <p className="text-muted-foreground">{testimonial.content}</p>
-              </CardContent>
-            </Card>
-          ))}
+          {testimonials.map((testimonial, index) => {
+            const cardAnimation = useScrollAnimation({
+              type: "slide",
+              direction: "up",
+              delay: 2000 + (index * 100)
+            });
+
+            return (
+              <Card
+                key={testimonial.name}
+                ref={cardAnimation.ref}
+                className={cn(cardAnimation.className, "text-card-foreground")}
+              >
+                <CardHeader className="flex flex-row items-center gap-4">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="h-12 w-12 rounded-full object-cover"
+                  />
+                  <div>
+                    <h3 className="font-semibold">{testimonial.name}</h3>
+                    <p className="text-sm text-muted-foreground">{testimonial.title}</p>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex mb-2">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground">{testimonial.content}</p>
+                </CardContent>
+              </Card>
+            )
+          })}
         </div>
       </div>
     </section>

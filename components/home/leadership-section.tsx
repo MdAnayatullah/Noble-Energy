@@ -6,8 +6,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import Link from "next/link";
 import Image from "next/image";
+import { useScrollAnimation } from "@/lib/hooks/use-scroll-animation";
 import arqamImage from "@/components/images/arqam.jpeg";
 import hasanImage from "@/components/images/shaheedul_hasan.jpg";
+import clsx from "clsx";
+const cn = clsx;
 
 const leaders = [
     {
@@ -78,63 +81,79 @@ const leaders = [
 ];
 
 export default function LeadershipSection() {
+    const headerAnimation = useScrollAnimation({ type: "slide", direction: "up", delay: 2000 });
     return (
         <section className="py-16 bg-muted">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold">Our Leadership</h2>
-                    <p className="mt-4 text-lg text-muted-foreground">
-                        Meet the team driving innovation in solar energy
-                    </p>
+                <div ref={headerAnimation.ref} className={headerAnimation.className}>
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-bold">Our Leadership</h2>
+                        <p className="mt-4 text-lg text-muted-foreground">
+                            Meet the team driving innovation in solar energy
+                        </p>
+                    </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {leaders.map((leader) => (
-                        <Card
-                            key={leader.name}
-                            className="group relative hover:shadow-lg transition-all duration-300 animate-fade-in overflow-hidden"
-                        >
-                            <CardContent className="p-0">
-                                <div className="relative w-full h-64">
-                                    {typeof leader.image === "string" ? (
-                                        <img
-                                            src={leader.image}
-                                            alt={leader.name}
-                                            className="object-cover w-full h-full"
-                                        />
-                                    ) : (
-                                        <Image
-                                            src={leader.image}
-                                            alt={leader.name}
-                                            layout="fill"
-                                            objectFit="cover"
-                                            className="rounded-md"
-                                            priority // Ensures the local image loads faster
-                                        />
-                                    )}
-                                    <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-center text-white">
-                                        <p className="text-sm mb-4">With us since {leader.since}</p>
-                                        <p className="mb-4">{leader.description}</p>
-                                        <blockquote className="italic text-sm border-l-2 pl-4 mt-auto">
-                                            "{leader.quote}"
-                                        </blockquote>
+                    {leaders.map((leader, index) => {
+                        const cardAnimation = useScrollAnimation({
+                            type: "slide",
+                            direction: index % 2 === 0 ? "left" : "right",
+                            delay: 2000 + (index * 100)
+                        });
+
+                        return (
+                            <Card
+                                key={leader.name}
+                                ref={cardAnimation.ref}
+                                className={cn(
+                                    cardAnimation.className,
+                                    "group relative hover:shadow-lg transition-all duration-300 overflow-hidden hover:translate-y-2 hover:scale-105"
+                                )}
+                            //className="group relative hover:shadow-lg transition-all duration-300 animate-fade-in overflow-hidden"
+                            >
+                                <CardContent className="p-0">
+                                    <div className="relative w-full h-64">
+                                        {typeof leader.image === "string" ? (
+                                            <img
+                                                src={leader.image}
+                                                alt={leader.name}
+                                                className="object-cover w-full h-full"
+                                            />
+                                        ) : (
+                                            <Image
+                                                src={leader.image}
+                                                alt={leader.name}
+                                                layout="fill"
+                                                objectFit="cover"
+                                                className="rounded-md"
+                                                priority // Ensures the local image loads faster
+                                            />
+                                        )}
+                                        <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-center text-white">
+                                            <p className="text-sm mb-4">With us since {leader.since}</p>
+                                            <p className="mb-4">{leader.description}</p>
+                                            <blockquote className="italic text-sm border-l-2 pl-4 mt-auto">
+                                                "{leader.quote}"
+                                            </blockquote>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="p-6">
-                                    <h3 className="text-xl font-semibold">{leader.name}</h3>
-                                    <p className="text-primary mt-1">{leader.role}</p>
-                                    <p className="text-sm text-muted-foreground mt-1">{leader.education}</p>
-                                    <Link
-                                        href={leader.linkedin}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="absolute bottom-3 right-4 p-2 text-muted-foreground hover:text-primary transition-colors hover:rounded-full hover:bg-gray-100 hover:translate-y-1"
-                                    >
-                                        <FontAwesomeIcon icon={faLinkedinIn} style={{ color: '#0077B5', fontSize: '24px' }} className="h-5 w-5" />
-                                    </Link>
-                                </div>
-                            </CardContent>
-                        </Card>
-                    ))}
+                                    <div className="p-6">
+                                        <h3 className="text-xl font-semibold">{leader.name}</h3>
+                                        <p className="text-primary mt-1">{leader.role}</p>
+                                        <p className="text-sm text-muted-foreground mt-1">{leader.education}</p>
+                                        <Link
+                                            href={leader.linkedin}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="absolute bottom-3 right-4 p-2 text-muted-foreground hover:text-primary transition-colors hover:rounded-full hover:bg-gray-100 hover:translate-y-1"
+                                        >
+                                            <FontAwesomeIcon icon={faLinkedinIn} style={{ color: '#0077B5', fontSize: '24px' }} className="h-5 w-5" />
+                                        </Link>
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        )
+                    })}
                 </div>
             </div>
         </section>
