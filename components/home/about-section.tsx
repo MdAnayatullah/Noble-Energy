@@ -7,8 +7,8 @@ import { useScrollAnimation } from "@/lib/hooks/use-scroll-animation";
 
 
 export default function AboutSection() {
-    const textAnimation = useScrollAnimation({ type: "slide", direction: "right", delay: 1000 });
-    const imageAnimation = useScrollAnimation({ type: "slide", direction: "left", delay: 2000 });
+    const textAnimation = useScrollAnimation({ type: "slide", direction: "right", delay: 200 });
+    const imageAnimation = useScrollAnimation({ type: "slide", direction: "left", delay: 400 });
 
     return (
         <section className="py-16 bg-background">
