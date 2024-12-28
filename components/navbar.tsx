@@ -9,11 +9,15 @@ import { Sun, Moon, Menu, X } from "lucide-react";
 import { useTheme } from "next-themes";
 import logo from "@/components/logo/logo1.png"; // Import the logo
 import { cn } from "@/lib/utils";
+import { useRandomGradient } from "@/lib/hooks/use-random-gradient";
+
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { theme, setTheme } = useTheme();
+  const { gradient, changeGradient } = useRandomGradient();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,9 +43,13 @@ const Navbar = () => {
     <nav className={cn(
       "fixed top-0 w-full z-50 transition-all duration-300",
       scrolled
-        ? "bg-background/80 backdrop-blur-md border-b shadow-sm"
-        : "bg-background border-b"
-    )}>
+        // ? "bg-background/80 backdrop-blur-md border-b shadow-sm"
+        // : "bg-background border-b"
+        ? `bg-gradient-to-r ${gradient} backdrop-blur-md shadow-sm`
+        : `bg-gradient-to-r ${gradient}`,
+    )}
+      onMouseEnter={changeGradient}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">

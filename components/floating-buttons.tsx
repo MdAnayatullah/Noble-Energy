@@ -47,7 +47,7 @@ export default function FloatingButtons() {
             >
                 <Button
                     size="icon"
-                    className="h-12 w-12 rounded-full bg-[#e6ece8] hover:bg-[#afbab2] shadow-lg transition-all duration-300 hover:shadow-xl"
+                    className="h-12 w-12 rounded-full bg-[#e6ece8] hover:bg-[#ceffdb] shadow-lg transition-all duration-300 hover:shadow-xl"
                 >
                     <FontAwesomeIcon icon={faWhatsapp} style={{ color: '#25D366', fontSize: '24px' }} className="h-6 w-6 text-white" />
                 </Button>

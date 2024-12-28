@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { format } from "date-fns";
 import { useScrollAnimation } from "@/lib/hooks/use-scroll-animation";
 import clsx from "clsx";
 const cn = clsx;
@@ -91,7 +92,8 @@ export default function FeaturedBlogs() {
                                         <div className="flex items-center gap-2 mb-2">
                                             <Badge>{post.category}</Badge>
                                             <span className="text-sm text-muted-foreground">
-                                                {new Date(post.date).toLocaleDateString()}
+                                                {/* {new Date(post.date).toLocaleDateString()} */}
+                                                {format(new Date(post.date), "dd/MM/yyyy")}
                                             </span>
                                         </div>
                                         <CardTitle className="text-xl group-hover:text-primary transition-colors">

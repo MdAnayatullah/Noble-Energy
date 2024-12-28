@@ -20,6 +20,11 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       colors: {
+        blue: { 500: '#3B82F6' },
+        purple: { 500: '#8B5CF6' },
+        green: { 400: '#34D399', 500: '#22C55E' },
+        pink: { 500: '#EC4899' },
+        // Add other colors if missing
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

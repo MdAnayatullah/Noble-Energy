@@ -1,13 +1,22 @@
+"use client"
+
 import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 // import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import logo from "@/components/logo/logo1.png";
+import { useRandomGradient } from "@/lib/hooks/use-random-gradient";
+
 
 const Footer = () => {
+  const { gradient, changeGradient } = useRandomGradient();
   return (
-    <footer className="bg-background border-t">
+    // <footer className="bg-background border-t">
+    <footer
+      className={`bg-gradient-to-r ${gradient} transition-colors duration-500`}
+      onMouseEnter={changeGradient}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
@@ -90,3 +99,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
