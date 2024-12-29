@@ -6,7 +6,7 @@ import { Search } from "lucide-react";
 
 export default function BlogPage() {
   return (
-    <div className="bg-background min-h-screen py-16">
+    <div className="bg-background min-h-screen py-16 hover:bg-gradient-to-b from-green-50 to-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold">Solar Energy Blog</h1>
@@ -24,7 +24,7 @@ export default function BlogPage() {
             />
           </div>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-3">
             <BlogGrid />

@@ -32,7 +32,7 @@ const features = [
 export default function WhyChooseUs() {
   const headerAnimation = useScrollAnimation({ type: "fade", delay: 2000 });
   return (
-    <section className="py-16 bg-muted">
+    <section className="py-16 bg-muted hover:bg-gradient-to-b from-blue-100 to-green-100 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={headerAnimation.ref} className={headerAnimation.className}>
           <div className="text-center mb-12">
@@ -54,7 +54,7 @@ export default function WhyChooseUs() {
               <Card
                 key={feature.title}
                 ref={cardAnimation.ref}
-                className={cn(cardAnimation.className, "bg-background")}
+                className={cn(cardAnimation.className, "bg-background hover:translate-y-2 hover:scale-105 transition-all duration-300 hover:bg-gray-200")}
               >
                 <CardHeader>
                   <feature.icon className="h-8 w-8 mb-4 text-primary" />

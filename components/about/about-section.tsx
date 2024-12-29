@@ -8,7 +8,7 @@ export default function AboutSection() {
     const [ref2, inView2] = useInView({ triggerOnce: true, threshold: 0.1 });
 
     return (
-        <section className="py-24 bg-background">
+        <section className="py-24 bg-background hover:bg-gradient-to-t from-red-100 to-blue-100 transition-all duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h1 className="text-4xl font-bold mb-4">About Noble Energy</h1>

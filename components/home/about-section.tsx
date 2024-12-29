@@ -11,7 +11,7 @@ export default function AboutSection() {
     const imageAnimation = useScrollAnimation({ type: "slide", direction: "left", delay: 400 });
 
     return (
-        <section className="py-16 bg-background">
+        <section className="py-16 bg-background hover:bg-gradient-to-t from-blue-100 to-green-100 transition-all duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 

@@ -32,7 +32,7 @@ const testimonials = [
 export default function Testimonials() {
   const headerAnimation = useScrollAnimation({ type: "fade", delay: 2000 });
   return (
-    <section className="py-16 bg-background">
+    <section className="py-16 bg-background hover:bg-gradient-to-b from-gray-200 to-green-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={headerAnimation.ref} className={headerAnimation.className}>
           <div className="text-center mb-12">
@@ -54,7 +54,7 @@ export default function Testimonials() {
               <Card
                 key={testimonial.name}
                 ref={cardAnimation.ref}
-                className={cn(cardAnimation.className, "text-card-foreground")}
+                className={cn(cardAnimation.className, "text-card-foreground hover:translate-y-2 hover:scale-105 transition-all duration-300 hover:bg-gray-200")}
               >
                 <CardHeader className="flex flex-row items-center gap-4">
                   <img

@@ -83,7 +83,7 @@ const leaders = [
 export default function LeadershipSection() {
     const headerAnimation = useScrollAnimation({ type: "slide", direction: "up", delay: 2000 });
     return (
-        <section className="py-16 bg-muted">
+        <section className="py-16 bg-muted hover:bg-gradient-to-t from-pink-100 to-green-100">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div ref={headerAnimation.ref} className={headerAnimation.className}>
                     <div className="text-center mb-12">
@@ -145,7 +145,7 @@ export default function LeadershipSection() {
                                             href={leader.linkedin}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="absolute bottom-3 right-4 p-2 text-muted-foreground hover:text-primary transition-colors hover:rounded-full hover:bg-gray-100 hover:translate-y-1"
+                                            className="absolute bottom-3 right-4 p-2 text-muted-foreground hover:text-primary transition-colors hover:rounded-full bg-gray-50 rounded-full hover:bg-gray-200 hover:translate-y-1"
                                         >
                                             <FontAwesomeIcon icon={faLinkedinIn} style={{ color: '#0077B5', fontSize: '24px' }} className="h-5 w-5" />
                                         </Link>

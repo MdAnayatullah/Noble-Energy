@@ -49,7 +49,7 @@ export async function generateStaticParams() {
 
 export default function BlogPostPage() {
   return (
-    <div className="bg-background min-h-screen py-16">
+    <div className="bg-background min-h-screen py-16 hover:bg-gradient-to-b from-green-50 to-pink-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link href="/blog">
           <Button variant="ghost" className="mb-4">

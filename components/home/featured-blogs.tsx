@@ -45,7 +45,7 @@ export default function FeaturedBlogs() {
     const headerAnimation = useScrollAnimation({ type: "slide", direction: "up", delay: 1000 });
     const buttonAnimation = useScrollAnimation({ type: "slide", direction: "left", delay: 2000 });
     return (
-        <section className="py-16 bg-background">
+        <section className="py-16 bg-background hover:bg-gradient-to-b from-green-50 to-yellow-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center mb-12">
                     <div ref={headerAnimation.ref} className={headerAnimation.className}>
