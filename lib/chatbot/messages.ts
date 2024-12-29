@@ -9,15 +9,15 @@ export type Message = {
     {
       id: '1',
       type: 'bot',
-      content: 'Hello! 👋 I\'m your Noble Energy assistant. How can I help you today?',
+      content: 'Hello! 👋 I\'m your Noble Energy assistant. How can I help you today? In single keyword, You can ask me about solar panel cost, savings, installation, maintenance, and warranty.',
+      
       timestamp: new Date()
     }
   ];
   
   export const predefinedResponses: Record<string, string[]> = {
     'hello': [
-      'Hello! 👋 I\'m your Noble Energy assistant. How can I help you today?',
-      'You can ask me about solar panel cost, savings, installation, maintenance, and warranty.'    
+      'Hello! 👋 I\'m your Noble Energy assistant. How can I help you today?',    
     ],
     'cost': [
       'The cost of solar installation varies based on your energy needs and property size. Typically, residential systems range from Rs.50,000 to Rs.200,000 and commercial systems range from Rs.1,00,000 to Rs.5,00,000 (inflation adjusted) before incentives.',
