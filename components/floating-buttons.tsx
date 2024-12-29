@@ -6,6 +6,7 @@ import { ArrowUp } from "lucide-react";
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import Chatbot from "./chat/chatbot";
 
 export default function FloatingButtons() {
     const [showScrollTop, setShowScrollTop] = useState(false);
@@ -37,6 +38,9 @@ export default function FloatingButtons() {
             >
                 <ArrowUp className="h-5 w-5" />
             </Button>
+
+            {/* Chatbot */}
+            <Chatbot />
 
             {/* WhatsApp Button */}
             <a
