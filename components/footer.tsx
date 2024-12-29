@@ -91,7 +91,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Noble Energy. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Noble Energy. All rights reserved</p>
         </div>
       </div>
     </footer>
