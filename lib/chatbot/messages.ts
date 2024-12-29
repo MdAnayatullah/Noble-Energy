@@ -68,7 +68,7 @@ export type Message = {
   export function generateResponse(message: string): string[] {
     const lowerMessage = message.toLowerCase();
     
-    if (lowerMessage.includes('hii') || lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
+    if (lowerMessage.includes('hii') || lowerMessage.includes(' hii') || lowerMessage.includes(' hii ') || lowerMessage.includes('hii ') || lowerMessage.includes('hello') || lowerMessage.includes('hello ') || lowerMessage.includes(' hello') || lowerMessage.includes(' hello ') || lowerMessage.includes('hi') || lowerMessage.includes('hi ')|| lowerMessage.includes(' hi')|| lowerMessage.includes(' hi')) {
         return predefinedResponses.hello;
       }
     if (lowerMessage.includes('cost') || lowerMessage.includes('price') || lowerMessage.includes('expensive')) {

@@ -24,9 +24,9 @@ export default function MessageItem({ message }: MessageItemProps) {
                 )}
             >
                 <p className="text-sm">{message.content}</p>
-                <p className="text-xs mt-1 opacity-70">
+                {/* <p className="text-xs mt-1 opacity-70">
                     {message.timestamp.toLocaleTimeString()}
-                </p>
+                </p> */}
             </div>
         </div>
     );
