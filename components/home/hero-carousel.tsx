@@ -55,7 +55,7 @@ export default function HeroCarousel() {
         <CarouselContent>
           {carouselItems.map((item, index) => (
             <CarouselItem key={index}>
-              <div className="relative h-[600px]">
+              <div className="relative carousel-item">
                 <div
                   className="absolute inset-0 bg-cover bg-center"
                   style={{ backgroundImage: `url(${item.image})` }}

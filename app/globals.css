@@ -146,3 +146,13 @@ html {
 .hover-scale:hover {
   transform: scale(1.02);
 }
+
+.carousel-item {
+  min-height: calc(
+    100vh - 4rem
+  ); /* Full viewport height minus header/footer margin */
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+  position: relative; /* Maintain relative positioning for overlays */
+}
