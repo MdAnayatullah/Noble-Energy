@@ -51,7 +51,7 @@ export default function Chatbot() {
             {/* Chat button */}
             <Button
                 size="icon"
-                className="fixed right-6 bottom-24 z-50 h-12 w-12 rounded-full bg-primary hover:bg-green-200 shadow-lg transition-all duration-300 hover:shadow-xl"
+                className="fixed right-6 bottom-24 z-50 h-12 w-12 rounded-full bg-gray-300 hover:bg-green-200 shadow-lg transition-all duration-300 hover:shadow-xl"
                 onClick={() => setIsOpen(true)}
             >
                 <MessageCircle className="h-6 w-6 text-green-600" />
