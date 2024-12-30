@@ -61,7 +61,7 @@ export default function Chatbot() {
             {isOpen && (
                 <Card className="fixed right-6 bottom-24 z-50 w-[350px] h-[500px] flex flex-col shadow-xl">
                     <div className="flex items-center justify-between p-4 border-b">
-                        <h3 className="font-semibold">Solar Energy Assistant</h3>
+                        <h3 className="font-semibold">Noble Energy Assistant</h3>
                         <Button
                             size="icon"
                             variant="ghost"
