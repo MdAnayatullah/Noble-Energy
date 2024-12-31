@@ -184,6 +184,15 @@ export const predefinedResponses: Record<string, string[]> = {
     'Thank you for reaching out to Noble Energy.',
     'Have a nice day!'
   ],
+  'about_bot': [
+    'I am a Noble Energy assistant. I can answer your questions related to solar panel cost, savings, installation, maintenance, warranty, and other solar solutions.',
+    'Feel free to ask me anything about our products or services!'
+  ],
+  'products': [
+    'We provide high-quality solar panels and complete installation services for residential, commercial, and business needs.',
+    'Our products include solar panels, inverters, and other equipment required for solar energy solutions.',
+    'Would you like more details about a specific product or service?'
+  ],
   'default': [
     'I\'m sorry, I didn\'t quite understand that. Can you rephrase your question or ask about solar panel cost, savings, installation, maintenance, or warranty?',
     'Feel free to call us at (+91) 123-4567890 for more information.',
@@ -209,6 +218,8 @@ export function generateResponse(message: string): string[] {
     'ok': ['ok', 'oki', 'okay'],
     'no': ['no', 'nope', 'no thanks', 'not now', 'not sure', 'not interested', 'no thank you'],
     'yes': ['yes', 'yeah', 'yup', 'sure', 'of course'],
+    'about_bot': ['how are you', 'who are you', 'what are you', 'tell me about yourself', 'what can you do', 'who is noble energy assistant'],
+    'products': ['solar panel', 'solar product', 'solar equipment', 'panel', 'inverter', 'solar solutions'],
   };
 
   for (const [key, keywords] of Object.entries(keywordMappings)) {
