@@ -219,7 +219,7 @@ export function generateResponse(message: string): string[] {
     'no': ['no', 'nope', 'no thanks', 'not now', 'not sure', 'not interested', 'no thank you'],
     'yes': ['yes', 'yeah', 'yup', 'sure', 'of course'],
     'about_bot': ['how are you', 'who are you', 'what are you', 'tell me about yourself', 'what can you do', 'who is noble energy assistant'],
-    'products': ['solar panel', 'solar product', 'solar equipment', 'panel', 'inverter', 'solar solutions'],
+    'products': ['solar panel', 'solar product', 'solar equipment', 'panel', 'inverter', 'solar solutions','product','products'],
   };
 
   for (const [key, keywords] of Object.entries(keywordMappings)) {
