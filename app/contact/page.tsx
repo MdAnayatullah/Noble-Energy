@@ -1,6 +1,7 @@
 import ContactForm from "@/components/contact/form";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, Mail, MapPin } from "lucide-react";
+import ContactMap from "@/components/contact/map";
 
 export default function ContactPage() {
   return (
@@ -23,6 +24,8 @@ export default function ContactPage() {
                 <ContactForm />
               </CardContent>
             </Card>
+            {/* Add Map Component */}
+            {/* <ContactMap /> */}
           </div>
 
           <div className="space-y-6">
@@ -32,7 +35,7 @@ export default function ContactPage() {
                   <Phone className="h-6 w-6 text-primary" />
                   <div>
                     <h3 className="font-medium">Phone</h3>
-                    <p className="text-muted-foreground">(+91) 123-4567890</p>
+                    <p className="text-muted-foreground">+917554527050</p>
                   </div>
                 </div>
               </CardContent>
@@ -44,7 +47,7 @@ export default function ContactPage() {
                   <Mail className="h-6 w-6 text-primary" />
                   <div>
                     <h3 className="font-medium">Email</h3>
-                    <p className="text-muted-foreground">info@nobleenergy.com</p>
+                    <p className="text-muted-foreground">info@nobleenergy.co</p>
                   </div>
                 </div>
               </CardContent>

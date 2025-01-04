@@ -14,7 +14,7 @@ const cn = clsx;
 
 const leaders = [
     {
-        name: "Er. Shaheedul Hasan",
+        name: "Shaheedul Hasan",
         role: "Founder & CEO",
         education: "Bachelor of Electronic Engineering, Aligarh Muslim University",
         image: hasanImage, // Local image imported

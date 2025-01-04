@@ -174,7 +174,7 @@ export const predefinedResponses: Record<string, string[]> = {
   ],
   'yes': [
     'Thank you!',
-    'Please, call on this number: (+91) 123-4567890',
+    'Please, call on this number: +917554527050',
     'Our solar experts will help you.',
     'Thank you for reaching out to Noble Energy.',
     'Have a nice day!'
@@ -195,7 +195,7 @@ export const predefinedResponses: Record<string, string[]> = {
   ],
   'default': [
     'I\'m sorry, I didn\'t quite understand that. Can you rephrase your question or ask about solar panel cost, savings, installation, maintenance, or warranty?',
-    'Feel free to call us at (+91) 123-4567890 for more information.',
+    'Feel free to call us at +917554527050 for more information.',
   ],
 };
 
