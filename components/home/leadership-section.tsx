@@ -34,7 +34,7 @@ const leaders = [
         linkedin: "https://linkedin.com",
         since: "2024",
         description:
-            "Michael's strategic vision has helped expand our operations across multiple continents while maintaining our commitment to excellence.",
+            "Abrar's strategic vision has helped expand our operations across multiple continents while maintaining our commitment to excellence.",
         quote: "Success in sustainable energy comes from balancing innovation with reliability.",
     },
     {
@@ -49,16 +49,16 @@ const leaders = [
         quote: "Technology is the bridge between possibility and reality in renewable energy.",
     },
 
-    // {
-    //     name: "Md Anayatullah Ansari",
-    //     role: "IT Head",
-    //     //education: "B. Tech in CSE, Aligarh Muslim University",
-    //     image: anayat, // Local image imported
-    //     linkedin: "https://linkedin.com",
-    //     since: "2024",
-    //     description: "Anayat is a seasoned IT professional with a passion for sustainable technology solutions.",
-    //     quote: "Sustainable business is good business - for our planet and our future."
-    // },
+    {
+        name: "Md Anayatullah Ansari",
+        role: "IT Administrator",
+        //education: "B. Tech in CSE, Aligarh Muslim University",
+        image: anayat, // Local image imported
+        linkedin: "https://www.linkedin.com/in/anayat1/",
+        since: "2024",
+        description: "Anayat is a seasoned IT professional with a passion for sustainable technology solutions.",
+        quote: "Sustainable business is good business - for our planet and our future."
+    },
     // {
     //     name: "David Kim",
     //     role: "Director of Operations",
