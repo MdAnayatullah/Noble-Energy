@@ -171,7 +171,6 @@
 // };
 
 // export default Navbar;
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -194,7 +193,7 @@ import {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState({});
+  const [dropdownOpen, setDropdownOpen] = useState<Record<string, boolean>>({});
   const [scrolled, setScrolled] = useState(false);
   const { theme, setTheme } = useTheme();
   const { gradient, changeGradient } = useRandomGradient();
@@ -207,7 +206,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleDropdown = (name) => {
+  const toggleDropdown = (name: string) => {
     setDropdownOpen((prev) => ({ ...prev, [name]: !prev[name] }));
   };
 

@@ -10,6 +10,7 @@ import { useScrollAnimation } from "@/lib/hooks/use-scroll-animation";
 import arqamImage from "@/components/images/arqam.jpeg";
 import hasanImage from "@/components/images/shaheedul_hasan.jpg";
 import anayat from "@/components/images/Anayat.jpg";
+import abrar from "@/components/images/abrar.jpg";
 import clsx from "clsx";
 const cn = clsx;
 
@@ -29,8 +30,7 @@ const leaders = [
         name: "Syed Mohammad Abrar",
         role: "CEO",
         //education: "MSc in Renewable Energy, Stanford",
-        image:
-            "https://images.unsplash.com/",
+        image: abrar, // Local image imported
         linkedin: "https://linkedin.com",
         since: "2024",
         description:
