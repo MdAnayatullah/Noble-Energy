@@ -9,14 +9,15 @@ import Image from "next/image";
 import { useScrollAnimation } from "@/lib/hooks/use-scroll-animation";
 import arqamImage from "@/components/images/arqam.jpeg";
 import hasanImage from "@/components/images/shaheedul_hasan.jpg";
+import anayat from "@/components/images/Anayat.jpg";
 import clsx from "clsx";
 const cn = clsx;
 
 const leaders = [
     {
         name: "Shaheedul Hasan",
-        role: "Founder & CEO",
-        education: "Bachelor of Electronic Engineering, Aligarh Muslim University",
+        role: "CMD",
+        //education: "Bachelor of Electronic Engineering, Aligarh Muslim University",
         image: hasanImage, // Local image imported
         linkedin: "https://www.linkedin.com/in/shaheedul-hasan-14ab1132/",
         since: "2024",
@@ -25,9 +26,21 @@ const leaders = [
         quote: "Innovation and sustainability are not just buzzwords - they're the foundation of our future.",
     },
     {
+        name: "Syed Mohammad Abrar",
+        role: "CEO",
+        //education: "MSc in Renewable Energy, Stanford",
+        image:
+            "https://images.unsplash.com/",
+        linkedin: "https://linkedin.com",
+        since: "2024",
+        description:
+            "Michael's strategic vision has helped expand our operations across multiple continents while maintaining our commitment to excellence.",
+        quote: "Success in sustainable energy comes from balancing innovation with reliability.",
+    },
+    {
         name: "Arqam Ansari",
-        role: "Co-Founder & CTO",
-        education: "Ph.D. in Solar Engineering, MIT",
+        role: "CTO",
+        //education: "Ph.D. in Solar Engineering, MIT",
         image: arqamImage, // Local image imported
         linkedin: "https://www.linkedin.com/in/arqam-kaolin/",
         since: "2024",
@@ -35,49 +48,37 @@ const leaders = [
             "Arqam's groundbreaking research in solar efficiency has been instrumental in developing our cutting-edge technology solutions.",
         quote: "Technology is the bridge between possibility and reality in renewable energy.",
     },
-    {
-        name: "Michael Roberts",
-        role: "Managing Director",
-        education: "MSc in Renewable Energy, Stanford",
-        image:
-            "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=400&h=400&q=80",
-        linkedin: "https://linkedin.com",
-        since: "2024",
-        description:
-            "Michael's strategic vision has helped expand our operations across multiple continents while maintaining our commitment to excellence.",
-        quote: "Success in sustainable energy comes from balancing innovation with reliability.",
-    },
 
-    {
-        name: "Emily Thompson",
-        role: "Chairman",
-        education: "MBA, Wharton School",
-        image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=400&h=400&q=80",
-        linkedin: "https://linkedin.com",
-        since: "2024",
-        description: "Emily's expertise in corporate governance and sustainable business practices has been crucial in shaping our long-term strategy.",
-        quote: "Sustainable business is good business - for our planet and our future."
-    },
-    {
-        name: "David Kim",
-        role: "Director of Operations",
-        education: "MSc in Engineering, Berkeley",
-        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=400&h=400&q=80",
-        linkedin: "https://linkedin.com",
-        since: "2024",
-        description: "David's operational excellence has streamlined our installation processes and improved customer satisfaction across all regions.",
-        quote: "Efficiency in operations translates directly to customer satisfaction."
-    },
-    {
-        name: "Lisa Martinez",
-        role: "Director of Innovation",
-        education: "Ph.D. in Physics, CalTech",
-        image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=400&h=400&q=80",
-        linkedin: "https://linkedin.com",
-        since: "2024",
-        description: "Lisa leads our R&D initiatives, focusing on next-generation solar technologies and smart energy solutions.",
-        quote: "The future of energy is not just clean - it's intelligent and adaptive."
-    }
+    // {
+    //     name: "Md Anayatullah Ansari",
+    //     role: "IT Head",
+    //     //education: "B. Tech in CSE, Aligarh Muslim University",
+    //     image: anayat, // Local image imported
+    //     linkedin: "https://linkedin.com",
+    //     since: "2024",
+    //     description: "Anayat is a seasoned IT professional with a passion for sustainable technology solutions.",
+    //     quote: "Sustainable business is good business - for our planet and our future."
+    // },
+    // {
+    //     name: "David Kim",
+    //     role: "Director of Operations",
+    //     education: "MSc in Engineering, Berkeley",
+    //     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=400&h=400&q=80",
+    //     linkedin: "https://linkedin.com",
+    //     since: "2024",
+    //     description: "David's operational excellence has streamlined our installation processes and improved customer satisfaction across all regions.",
+    //     quote: "Efficiency in operations translates directly to customer satisfaction."
+    // },
+    // {
+    //     name: "Lisa Martinez",
+    //     role: "Director of Innovation",
+    //     education: "Ph.D. in Physics, CalTech",
+    //     image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=400&h=400&q=80",
+    //     linkedin: "https://linkedin.com",
+    //     since: "2024",
+    //     description: "Lisa leads our R&D initiatives, focusing on next-generation solar technologies and smart energy solutions.",
+    //     quote: "The future of energy is not just clean - it's intelligent and adaptive."
+    // }
 ];
 
 export default function LeadershipSection() {

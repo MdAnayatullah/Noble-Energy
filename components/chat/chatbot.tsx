@@ -114,25 +114,25 @@ export default function Chatbot() {
     }, []);
 
     // Auto-open chatbot after inactivity or initial load
-    useEffect(() => {
-        // Initial auto-open after 15 seconds
-        const initialOpenTimeout = setTimeout(() => {
-            if (!isOpen) setIsOpen(true);
-        }, 15000);
+    // useEffect(() => {
+    //     // Initial auto-open after 15 seconds
+    //     const initialOpenTimeout = setTimeout(() => {
+    //         if (!isOpen) setIsOpen(true);
+    //     }, 15000);
 
-        // Check for inactivity every 30 seconds
-        const inactivityCheck = setInterval(() => {
-            const inactiveTime = Date.now() - lastActivity;
-            if (inactiveTime > 30000 && !isOpen) { // 30 seconds of inactivity
-                setIsOpen(true);
-            }
-        }, 30000);
+    // Check for inactivity every 30 seconds
+    // const inactivityCheck = setInterval(() => {
+    //     const inactiveTime = Date.now() - lastActivity;
+    //     if (inactiveTime > 30000 && !isOpen) { // 30 seconds of inactivity
+    //         setIsOpen(true);
+    //     }
+    // }, 30000);
 
-        return () => {
-            clearTimeout(initialOpenTimeout);
-            clearInterval(inactivityCheck);
-        };
-    }, [isOpen, lastActivity]);
+    //     return () => {
+    //         clearTimeout(initialOpenTimeout);
+    //         clearInterval(inactivityCheck);
+    //     };
+    // }, [isOpen, lastActivity]);
 
     const handleSend = async (content: string) => {
         // Add user message

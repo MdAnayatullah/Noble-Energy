@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 :root {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.9%;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -78,6 +80,8 @@
   }
   body {
     @apply bg-background text-foreground;
+    @apply bg-gradient-to-br from-slate-50 via-purple-50 to-sky-50 dark:from-slate-900 dark:via-purple-900 dark:to-sky-900;
+    min-height: 100vh;
   }
 }
 
@@ -94,6 +98,19 @@ html {
   to {
     opacity: 1;
   }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-fade-out {
+  animation: fade-out 0.5s ease-out 1.5s forwards;
 }
 
 @keyframes slideUp {
@@ -155,4 +172,51 @@ html {
   align-items: center; /* Vertically center content */
   justify-content: center; /* Horizontally center content */
   position: relative; /* Maintain relative positioning for overlays */
+}
+
+/* Video background styles */
+.video-background {
+  @apply relative w-full h-[600px] overflow-hidden;
+}
+
+.video-background video {
+  @apply absolute top-0 left-0 w-full h-full object-cover;
+}
+
+.video-overlay {
+  @apply absolute inset-0 bg-black/40;
+}
+
+/* Video card styles */
+.video-card {
+  @apply relative overflow-hidden rounded-lg transition-all duration-300;
+}
+
+.video-card video {
+  @apply w-full h-full object-cover transition-transform duration-300;
+}
+
+.video-card:hover video {
+  @apply scale-105;
+}
+
+/* News ticker animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+.bg-glass-effect {
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  border: 1px solid rgba(255, 255, 255, 0.18); /* Border with transparency */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }

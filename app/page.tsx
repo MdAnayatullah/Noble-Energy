@@ -7,11 +7,13 @@ import ProductsOverview from "@/components/home/products-overview";
 import Testimonials from "@/components/home/testimonials";
 import WhyChooseUs from "@/components/home/why-choose-us";
 import FeaturedBlogs from "@/components/home/featured-blogs";
+import HeroVideo from "@/components/home/hero-video";
 
 export default function Home() {
   return (
     <div>
-      <HeroCarousel />
+      {/* <HeroCarousel /> */}
+      <HeroVideo />
       <AboutSection />
       <LeadershipSection />
       {/* <ProductsOverview /> */}
