@@ -141,7 +141,7 @@ export default function LeadershipSection() {
                                     <div className="p-6">
                                         <h3 className="text-xl font-semibold">{leader.name}</h3>
                                         <p className="text-primary mt-1">{leader.role}</p>
-                                        <p className="text-sm text-muted-foreground mt-1">{leader.education}</p>
+                                        {/* <p className="text-sm text-muted-foreground mt-1">{leader.education}</p> */}
                                         <Link
                                             href={leader.linkedin}
                                             target="_blank"
