@@ -80,7 +80,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    @apply bg-gradient-to-br from-slate-50 via-purple-50 to-sky-50 dark:from-slate-900 dark:via-purple-900 dark:to-sky-900;
+    /* @apply bg-gradient-to-br from-slate-50 via-purple-50 to-sky-50 dark:from-slate-900 dark:via-purple-900 dark:to-sky-900; */
     min-height: 100vh;
   }
 }

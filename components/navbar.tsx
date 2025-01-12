@@ -240,12 +240,8 @@ const Navbar = () => {
     <>
       <nav
         className={cn(
-          "fixed top-0 w-full z-50 transition-all duration-300",
-          scrolled
-            ? `bg-gradient-to-r ${gradient} backdrop-blur-md shadow-sm`
-            : `bg-gradient-to-r ${gradient}`
+          "fixed top-0 w-full z-50 transition-all duration-300"
         )}
-        onMouseEnter={changeGradient}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
