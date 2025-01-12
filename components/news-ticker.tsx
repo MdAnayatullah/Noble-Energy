@@ -45,7 +45,7 @@ import Link from "next/link";
 const news = [
     {
         id: 1,
-        title: "SolarTech achieves 1GW installation milestone",
+        title: "Noble Enegy achieves 100MW installation milestone",
         link: "/news/1gw-milestone"
     },
     {
@@ -55,7 +55,7 @@ const news = [
     },
     {
         id: 3,
-        title: "SolarTech expands operations to 5 new cities",
+        title: "Noble Enegy expands operations to 5 new cities",
         link: "/news/expansion"
     },
     {
@@ -65,7 +65,7 @@ const news = [
     },
     {
         id: 5,
-        title: "SolarTech wins Sustainable Energy Award 2024",
+        title: "Noble Energy wins Sustainable Energy Award 2024",
         link: "/news/award"
     }
 ];

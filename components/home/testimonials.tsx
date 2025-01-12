@@ -32,7 +32,7 @@ const testimonials = [
 export default function Testimonials() {
   const headerAnimation = useScrollAnimation({ type: "fade", delay: 2000 });
   return (
-    <section className="py-16 bg-background hover:bg-gradient-to-b from-gray-200 to-green-100">
+    <section className="py-16 bg-background ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={headerAnimation.ref} className={headerAnimation.className}>
           <div className="text-center mb-12">

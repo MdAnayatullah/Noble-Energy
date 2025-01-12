@@ -42,6 +42,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link href="/portfolio" className="text-muted-foreground hover:text-green-600">
+                  Portfolio
+                </Link>
+              </li>
+              <li>
                 <Link href="/careers" className="text-muted-foreground hover:text-green-600">
                   Career
                 </Link>
@@ -68,8 +73,8 @@ const Footer = () => {
             <ul className="space-y-2 text-muted-foreground">
               <li>Bhopal</li>
               <li>Madhya Pradesh</li>
-              <li>Phone: (+91) 1234567890</li>
-              <li>Email: info@nobleenergy.com</li>
+              <li>Phone: (+91)7554527050</li>
+              <li>Email: info@nobleenergy.co</li>
             </ul>
           </div>
           <div>
@@ -91,7 +96,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Noble Energy. All rights reserved</p>
+          <p>&copy; {new Date().getFullYear()} Noble Goup. All rights reserved</p>
         </div>
       </div>
     </footer>

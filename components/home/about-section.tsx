@@ -11,7 +11,7 @@ export default function AboutSection() {
     const imageAnimation = useScrollAnimation({ type: "slide", direction: "left", delay: 400 });
 
     return (
-        <section className="py-16 bg-background hover:bg-gradient-to-t from-blue-100 to-green-100 transition-all duration-300">
+        <section className="py-16 bg-background ">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -19,7 +19,7 @@ export default function AboutSection() {
                     <div ref={textAnimation.ref} className={textAnimation.className}>
                         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">About Noble Energy</h2>
                         <p className="text-lg text-muted-foreground mt-4">
-                            Founded in 2024, SolarTech has been at the forefront of solar energy innovation,
+                            Founded in 2024, Noble Energy has been at the forefront of solar energy innovation,
                             providing sustainable solutions for homes and businesses across the globe.
                         </p>
                         <p className="text-lg text-muted-foreground mt-4">

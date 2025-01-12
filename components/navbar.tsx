@@ -171,6 +171,8 @@
 // };
 
 // export default Navbar;
+
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -182,7 +184,6 @@ import { useTheme } from "next-themes";
 import logo from "@/components/logo/logo1.png";
 import { cn } from "@/lib/utils";
 import { useRandomGradient } from "@/lib/hooks/use-random-gradient";
-import NewsTicker from "./news-ticker";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -210,6 +211,10 @@ const Navbar = () => {
     setDropdownOpen((prev) => ({ ...prev, [name]: !prev[name] }));
   };
 
+  const closeDropdown = (name: string) => {
+    setDropdownOpen((prev) => ({ ...prev, [name]: false }));
+  };
+
   const navigation = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
@@ -233,7 +238,6 @@ const Navbar = () => {
 
   return (
     <>
-      <NewsTicker />
       <nav
         className={cn(
           "fixed top-0 w-full z-50 transition-all duration-300",
@@ -250,7 +254,9 @@ const Navbar = () => {
                 href="/"
                 className="flex items-center space-x-2 text-2xl font-bold text-primary hover:opacity-80 transition-opacity"
               >
-                <Image src={logo} alt="Noble Energy Logo" width={100} height={150} />
+                <div className="p-2 sm:p-4">
+                  <Image src={logo} alt="Noble Energy Logo" width={100} height={150} />
+                </div>
               </Link>
             </div>
 
@@ -328,8 +334,6 @@ const Navbar = () => {
             {navigation.map((item) => (
               <div key={item.name}>
                 <div
-                  onMouseEnter={() => toggleDropdown(item.name)}
-                  onMouseLeave={() => toggleDropdown(item.name)}
                   onClick={() => toggleDropdown(item.name)}
                   className="flex justify-between items-center px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors cursor-pointer"
                 >
@@ -345,7 +349,10 @@ const Navbar = () => {
                         key={subItem.name}
                         href={subItem.href}
                         className="block px-3 py-2 rounded-md text-sm text-foreground hover:text-primary hover:bg-accent transition-colors"
-                        onClick={() => setIsOpen(false)}
+                        onClick={() => {
+                          setIsOpen(false);
+                          closeDropdown(item.name);
+                        }}
                       >
                         {subItem.name}
                       </Link>
