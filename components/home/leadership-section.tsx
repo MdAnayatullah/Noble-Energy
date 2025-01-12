@@ -34,7 +34,7 @@ const leaders = [
         linkedin: "https://linkedin.com",
         since: "2024",
         description:
-            "Abrar's strategic vision has helped expand our operations across multiple continents while maintaining our commitment to excellence.",
+            "Abrar's strategic vision has helped expand our operations across india and helped us achieve our goals while maintaining our commitment to excellence.",
         quote: "Success in sustainable energy comes from balancing innovation with reliability.",
     },
     {

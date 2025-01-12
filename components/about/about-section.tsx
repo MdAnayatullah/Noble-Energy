@@ -25,7 +25,7 @@ export default function AboutSection() {
                     <div className="space-y-6">
                         <h2 className="text-3xl font-bold">Our Mission</h2>
                         <p className="text-lg text-muted-foreground">
-                            Founded in 2024, SolarTech has been at the forefront of solar energy innovation.
+                            Founded in 2024, Noble Energy has been at the forefront of solar energy innovation.
                             Our mission is to accelerate the world's transition to sustainable energy through
                             advanced solar technology and exceptional service.
                         </p>

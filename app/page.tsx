@@ -18,7 +18,7 @@ export default function Home() {
       <LeadershipSection />
       {/* <ProductsOverview /> */}
       <WhyChooseUs />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <FeaturedBlogs />
     </div>
   );
