@@ -7,15 +7,102 @@ import { faFacebook, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/f
 // import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import logo from "@/components/logo/logo1.png";
 import { useRandomGradient } from "@/lib/hooks/use-random-gradient";
+import { useEffect, useRef } from 'react';
+
+
+// // Bhopal Substation locations
+// const substations = [
+//   { name: "Govindpura 220KV", lat: 23.2599, lng: 77.4126 },
+//   { name: "Mandideep 400KV", lat: 23.1087, lng: 77.5022 },
+//   { name: "Bhopal 400KV", lat: 23.2467, lng: 77.4122 },
+//   { name: "PGCIL Bhopal", lat: 23.2833, lng: 77.3524 },
+//   { name: "Bairagarh 132KV", lat: 23.2856, lng: 77.3573 },
+//   { name: "Shahpura 132KV", lat: 23.2033, lng: 77.4294 },
+//   { name: "Ayodhya Nagar 132KV", lat: 23.2724, lng: 77.4274 },
+//   { name: "Karond 132KV", lat: 23.3014, lng: 77.4324 },
+//   { name: "BHEL 220KV", lat: 23.2125, lng: 77.4037 },
+//   { name: "Misrod 132KV", lat: 23.1789, lng: 77.4851 }
+// ];
 
 
 const Footer = () => {
   const { gradient, changeGradient } = useRandomGradient();
+  const mapRef = useRef<HTMLDivElement>(null);
+
+  // useEffect(() => {
+  //   // Load Google Maps script
+  //   const script = document.createElement('script');
+  //   script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`;
+  //   script.async = true;
+  //   script.defer = true;
+  //   script.onload = initMap;
+  //   document.head.appendChild(script);
+
+  //   return () => {
+  //     document.head.removeChild(script);
+  //   };
+  // }, []);
+
+  // const initMap = () => {
+  //   if (mapRef.current) {
+  //     // Center on Bhopal
+  //     const bhopal = { lat: 23.2599, lng: 77.4126 };
+
+  //     const map = new window.google.maps.Map(mapRef.current, {
+  //       center: bhopal,
+  //       zoom: 12,
+  //       styles: [
+  //         {
+  //           featureType: "all",
+  //           elementType: "geometry",
+  //           stylers: [{ color: "#242f3e" }]
+  //         },
+  //         {
+  //           featureType: "all",
+  //           elementType: "labels.text.stroke",
+  //           stylers: [{ color: "#242f3e" }]
+  //         },
+  //         {
+  //           featureType: "all",
+  //           elementType: "labels.text.fill",
+  //           stylers: [{ color: "#746855" }]
+  //         }
+  //       ]
+  //     });
+
+  // Add markers for each substation
+  //     substations.forEach(station => {
+  //       const marker = new window.google.maps.Marker({
+  //         position: { lat: station.lat, lng: station.lng },
+  //         map,
+  //         title: station.name,
+  //         icon: {
+  //           path: window.google.maps.SymbolPath.CIRCLE,
+  //           scale: 8,
+  //           fillColor: "#22c55e",
+  //           fillOpacity: 1,
+  //           strokeColor: "#ffffff",
+  //           strokeWeight: 2,
+  //         }
+  //       });
+
+  //       // Add info window
+  //       const infowindow = new window.google.maps.InfoWindow({
+  //         content: `<div style="color: black; padding: 5px;"><strong>${station.name}</strong></div>`
+  //       });
+
+  //       marker.addListener("click", () => {
+  //         infowindow.open(map, marker);
+  //       });
+  //     });
+  //   }
+  // };
+
   return (
     // <footer className="bg-background border-t">
     <footer
-      className={`bg-gradient-to-r ${gradient} transition-colors duration-500`}
-      onMouseEnter={changeGradient}
+    // className={`bg-gradient-to-r ${gradient} transition-colors duration-500`}
+    // onMouseEnter={changeGradient}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -95,8 +182,10 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Noble Goup. All rights reserved</p>
+
+
+        <div className="border-t border-white/10 pt-8 text-center text-white/80">
+          <p>&copy; {new Date().getFullYear()} Noble Energy. All rights reserved.</p>
         </div>
       </div>
     </footer>
@@ -104,4 +193,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
