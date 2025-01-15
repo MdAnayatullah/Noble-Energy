@@ -251,7 +251,7 @@ const Navbar = () => {
                 className="flex items-center space-x-2 text-2xl font-bold text-primary hover:opacity-80 transition-opacity"
               >
                 <div className="p-2 sm:p-4">
-                  <Image src={logo} alt="Noble Energy Logo" width={100} height={150} />
+                  <Image src={logo} alt="Noble Energy Logo" width={60} height={150} />
                 </div>
               </Link>
             </div>
