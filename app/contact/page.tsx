@@ -60,8 +60,9 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-medium">Address</h3>
                     <p className="text-muted-foreground">
-                      Bhopal<br />
-                      Madhya Pradesh, 10001, India .
+                      202,203, 2nd Floor, Eden Garden, Kolar Tiraha
+                      JankariNagar, Chunabhatti<br />
+                      Bhopal, Madhya Pradesh, India .
                     </p>
                   </div>
                 </div>

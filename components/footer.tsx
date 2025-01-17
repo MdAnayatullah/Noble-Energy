@@ -158,8 +158,9 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li>Bhopal</li>
-              <li>Madhya Pradesh</li>
+              <li>202,203, 2nd Floor, Eden Garden, Kolar Tiraha</li>
+              <li>JankariNagar, Chunabhatti</li>
+              <li>Bhopal, Madhya Pradesh</li>
               <li>Phone: (+91)7554527050</li>
               <li>Email: info@nobleenergy.co</li>
             </ul>
