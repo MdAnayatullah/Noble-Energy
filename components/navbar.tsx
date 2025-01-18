@@ -173,6 +173,7 @@
 // export default Navbar;
 
 
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -238,18 +239,11 @@ const Navbar = () => {
 
   return (
     <>
-      <nav
-        className={cn(
-          "fixed top-0 w-full z-50 transition-all duration-300"
-        )}
-      >
+      <nav className={cn("fixed top-0 w-full z-50 transition-all duration-300")}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <Link
-                href="/"
-                className="flex items-center space-x-2 text-2xl font-bold text-primary hover:opacity-80 transition-opacity"
-              >
+              <Link href="/" className="flex items-center space-x-2 text-2xl font-bold text-primary hover:opacity-80 transition-opacity">
                 <div className="p-2 sm:p-4">
                   <Image src={logo} alt="Noble Energy Logo" width={60} height={150} />
                 </div>
@@ -270,7 +264,7 @@ const Navbar = () => {
                               <li key={subItem.name}>
                                 <Link
                                   href={subItem.href}
-                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-200 hover:text-green-700 focus:bg-gray-200 focus:text-green-700"
                                 >
                                   {subItem.name}
                                 </Link>
@@ -283,7 +277,7 @@ const Navbar = () => {
                       <NavigationMenuItem key={item.name}>
                         <Link
                           href={item.href}
-                          className="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium"
+                          className="text-foreground hover:bg-gray-200 hover:text-green-700 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                         >
                           {item.name}
                         </Link>
@@ -296,7 +290,7 @@ const Navbar = () => {
                 variant="ghost"
                 size="icon"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="hover:bg-accent transition-colors"
+                className="hover:bg-gray-200 transition-colors"
                 aria-label="Toggle Theme"
               >
                 {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
@@ -309,7 +303,7 @@ const Navbar = () => {
                 variant="ghost"
                 size="icon"
                 onClick={() => setIsOpen(!isOpen)}
-                className="hover:bg-accent transition-colors"
+                className="hover:bg-gray-200 transition-colors"
                 aria-label="Toggle Navigation"
                 aria-expanded={isOpen}
               >
@@ -331,7 +325,7 @@ const Navbar = () => {
               <div key={item.name}>
                 <div
                   onClick={() => toggleDropdown(item.name)}
-                  className="flex justify-between items-center px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors cursor-pointer"
+                  className="flex justify-between items-center px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-gray-200 hover:text-green-700 transition-colors cursor-pointer"
                 >
                   <span>{item.name}</span>
                   {item.items && (
@@ -344,7 +338,7 @@ const Navbar = () => {
                       <Link
                         key={subItem.name}
                         href={subItem.href}
-                        className="block px-3 py-2 rounded-md text-sm text-foreground hover:text-primary hover:bg-accent transition-colors"
+                        className="block px-3 py-2 rounded-md text-sm text-foreground hover:bg-gray-200 hover:text-green-700 transition-colors"
                         onClick={() => {
                           setIsOpen(false);
                           closeDropdown(item.name);
